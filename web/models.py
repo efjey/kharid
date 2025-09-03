@@ -8,3 +8,10 @@ class Expense(models.Model):
     amount = models.BigIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+class Income(models.Model):
+    text = models.CharField(max_length=259)
+    date = models.DateTimeField()
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    
